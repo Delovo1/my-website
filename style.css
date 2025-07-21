@@ -5,6 +5,7 @@ body  {
   margin: 0;
   padding: 0ы;
   font-size: 1.6rem; /* вместо прежних 16px */
+  overflow-x: hidden;
 }
 html {
   scroll-behavior: smooth;
@@ -393,7 +394,6 @@ footer.info {
   background-color: white;
 }
 
-/* Медиа-запрос для маленьких экранов */
 @media (max-width: 768px) {
   .navigator {
     display: none;
@@ -408,6 +408,9 @@ footer.info {
     padding: 20px 0;
     z-index: 999;
   }
+  .logo > span {
+    display: none;
+  }
 
   .navigator.active {
     display: flex;
@@ -418,12 +421,47 @@ footer.info {
   }
 
   nav {
-    position: relative;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative;
+    flex-wrap: wrap; */
+    min-height: 50px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px 16px;
   }
 
-  nav .logo {
+  /* nav .logo {
     justify-content: space-between;
     width: 100%;
-  }
+  } */
+   .advantages {
+    flex-direction: column;
+    align-content: flex-start;
+   }
+   .block {
+    width: 100%;
+    min-width: 441px;
+   }
+   .buttons {
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 16px;
+   }
+   .left {
+    align-self: center;
+    min-width: 288px;
+   }
+   .right {
+    align-self: center;
+    min-width: 288px;
+   }
+   .content {
+    padding: 48px 16px;
+   }
+   .content > img {
+    display: none;
+   }
 }
