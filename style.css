@@ -7,7 +7,7 @@ html, body {
 }
 body  {
   margin: 0;
-  padding: 0ы;
+  padding: 0да;
   font-size: 1.6rem; /* вместо прежних 16px */
   overflow-x: hidden;
 }
@@ -245,21 +245,27 @@ h3.druk span {
   display: inline-block;
   transform: scaleX(1.3);
 }
+
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.6rem;
+  max-width: 1300px;
+  margin: 0 auto;
 }
+
 section {
-  max-width: 128rem;
-  max-height: 99.2rem;
-  margin: 10rem auto;
+  margin: 5rem auto;
 }
 h2.pages {
   font-family: Roboto;
   font-weight: 700;
   font-size: 4rem;
   line-height: 4.8rem;
+ 
+    text-align: center;
+
 }
 .includeImg {
   background-color: black;
@@ -275,6 +281,7 @@ h2.pages {
 .card {
   border: solid 1px #00000029;
   border-radius: 6px;
+  max-width: 414.4px;
 }
 .card > p {
   font-family: Roboto;
@@ -282,6 +289,7 @@ h2.pages {
   font-size: 2rem;
   line-height: 2.8rem;
   margin-left: 3.2rem;
+  
 }
 footer.info {
   width: 100%;
@@ -433,17 +441,14 @@ footer.info {
     min-height: 50px;
     width: 100%;
     margin: 0px;
-    padding: 0px 16px;
+    padding: 0px 3rem;
   }
 
   /* nav .logo {
     justify-content: space-between;
     width: 100%;
   } */
-   .advantages {
-    flex-direction: column;
-    align-content: flex-start;
-   }
+
    .block {
     width: 100%;
     min-width: 441px;
@@ -468,4 +473,54 @@ footer.info {
    .content > img {
     display: none;
    }
+   
+
+}
+@media(max-width:1322px) {
+     .advantages {
+    flex-direction: column;
+    align-content: flex-start;
+   }
+   .feature {
+  justify-content: center;
+}
+.block-quote {
+  width: 50%;
+}
+}
+@media(max-width:692px) {
+.block-quote {
+  width: 65%;
+}
+}
+@media(max-width:800px) {
+  .log_button {
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 3.2rem;
+    padding: 1rem;
+  }
+  .log_button > button {
+    padding: 1.2rem 7.2rem;
+    margin: 0px auto;
+    width: 100%;
+  }
+  .contacts {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+  .contacts > ul {
+    flex-wrap: wrap;
+  }
+  .by {
+    display: none;
+  }
+}
+@media (max-width:1060px) {
+  .navigator > button {
+    display: none;
+  }
+  
 }
