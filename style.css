@@ -1,24 +1,27 @@
 html {
   font-size: 62.5%; /* 1rem = 10px */
-}
-html, body {
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
+
 body  {
+  overflow-x: hidden;
+  max-width: 100%;
   margin: 0;
-  padding: 0да;
+  padding: 0;
   font-size: 1.6rem; /* вместо прежних 16px */
   overflow-x: hidden;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 header {
   display: flex;
   width: 100%;
   max-height: 8.1rem;
   background-color: black;
+}
+button {
+  cursor: pointer;
 }
 nav {
   display: flex;
@@ -59,7 +62,7 @@ nav {
   align-items: center;
   gap: 2rem;
 }
-.navigator > button {
+.navigator > a {
   background-color: #FF7143;
   color: black;
   padding: 1.2rem 3.2rem;
@@ -70,6 +73,7 @@ nav {
   margin-left: 6.5rem;
   white-space: nowrap;
     border: none;
+    text-decoration: none;
 }
 .main {
   background-color: #FF7143;
@@ -145,6 +149,7 @@ nav {
   width: 100%;
   gap: 1.6rem;
   margin: 8rem auto;
+  padding: 0px 0.5rem;
 }
 .image {
   display: inline-block;
@@ -293,6 +298,7 @@ h2.pages {
 }
 footer.info {
   width: 100%;
+  padding: 0px;
   background-color: black;
 }
 .container {
@@ -521,6 +527,15 @@ footer.info {
 @media (max-width:1060px) {
   .navigator > button {
     display: none;
+  }
+}
+@media (max-width:492px) {
+  .quote {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  .container {
+    width: 83%;
   }
   
 }
